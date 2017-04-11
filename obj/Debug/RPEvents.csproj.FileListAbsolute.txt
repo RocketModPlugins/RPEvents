@@ -1,2 +1,3 @@
 C:\Users\Trevor\Desktop\Codies\Unturned\Unturned Plugins\RPEvents\bin\Release\RPEvents.dll
 C:\Users\Trevor\Desktop\Codies\Unturned\Unturned Plugins\RPEvents\obj\Debug\RPEvents.dll
+C:\Users\Trevor\Desktop\Codies\Unturned\Unturned Plugins\RPEvents\obj\Debug\RPEvents.csprojResolveAssemblyReference.cache

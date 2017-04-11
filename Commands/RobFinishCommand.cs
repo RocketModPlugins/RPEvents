@@ -1,4 +1,5 @@
 ﻿using Rocket.API;
+using Rocket.API.Extensions;
 using Rocket.Core.Logging;
 using Rocket.Unturned.Chat;
 using Rocket.Unturned.Player;
@@ -63,6 +64,8 @@ namespace coolpuppy24.rpevents
         {
             UnturnedPlayer player = (UnturnedPlayer)caller;
 
+            string message = command.GetParameterString(0);
+
             if (command.Length == null)
             {
                 Logger.Log("This command cannot be called from the console!");
@@ -70,7 +73,7 @@ namespace coolpuppy24.rpevents
             }
             else
             {
-                UnturnedChat.Say(Main.Instance.Translate("command_robfinish", player.CharacterName));
+                UnturnedChat.Say(Main.Instance.Translate("command_robfinish", message));
                 return;
             }
 
