@@ -2,6 +2,7 @@
 using Rocket.API.Extensions;
 using Rocket.Core.Logging;
 using Rocket.Unturned.Chat;
+using Rocket.Unturned.Commands;
 using Rocket.Unturned.Player;
 using System;
 using System.Collections.Generic;
@@ -62,9 +63,8 @@ namespace coolpuppy24.rpevents
 
         public void Execute(IRocketPlayer caller, string[] command)
         {
-            UnturnedPlayer player = (UnturnedPlayer)caller;
-
-            string message = command.GetParameterString(0);
+            UnturnedPlayer player = command.GetUnturnedPlayerParameter(0);
+            if (player == null) UnturnedChat.Say(caller, Main.Instance.Translate("player_not_found"));
 
             if (command.Length == null)
             {
@@ -73,7 +73,7 @@ namespace coolpuppy24.rpevents
             }
             else
             {
-                UnturnedChat.Say(Main.Instance.Translate("command_robfinish", message));
+                UnturnedChat.Say(Main.Instance.Translate("command_robfinish", caller.DisplayName));
                 return;
             }
 

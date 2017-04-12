@@ -16,7 +16,7 @@ namespace coolpuppy24.rpevents
 {
     public class Main : RocketPlugin
     {
-        public static string version = "1.0.0.0";
+        public static string version = "1.0.0.2";
 
         public static Main Instance = null;
 
