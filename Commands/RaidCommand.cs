@@ -8,6 +8,7 @@ using System;
 using System.Collections.Generic;
 using SDG.Unturned;
 using Rocket.API.Extensions;
+using UnityEngine;
 
 namespace coolpuppy24.rpevents
 {
@@ -76,12 +77,12 @@ namespace coolpuppy24.rpevents
             }
             if (command.Length == null)
             {
-                Logger.Log("This command cannot be called from the console!");
+                Rocket.Core.Logging.Logger.Log("This command cannot be called from the console!");
                 return;
             }
             else
             {
-                UnturnedChat.Say(Main.Instance.Translate("command_raid", caller.DisplayName, message, Main.Instance.Configuration.Instance.MinutesUntilRaid));
+                UnturnedChat.Say(Main.Instance.Translate("command_raid", caller.DisplayName, message, Main.Instance.Configuration.Instance.MinutesUntilRaid), UnturnedChat.GetColorFromName(Main.Instance.Configuration.Instance.MessageColor, Color.red));
                 return;
             }
         }

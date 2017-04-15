@@ -7,6 +7,7 @@ using Rocket.Unturned.Player;
 using System;
 using System.Collections.Generic;
 using SDG.Unturned;
+using UnityEngine;
 
 namespace coolpuppy24.rpevents
 {
@@ -69,12 +70,12 @@ namespace coolpuppy24.rpevents
 
             if (command.Length == null)
             {
-                Logger.LogError("This command cannot be called from the console!");
+                Rocket.Core.Logging.Logger.LogError("This command cannot be called from the console!");
                 return;
             }
             else
             {
-                UnturnedChat.Say(Main.Instance.Translate("command_rob", caller.DisplayName, player.CharacterName));
+                UnturnedChat.Say(Main.Instance.Translate("command_rob", caller.DisplayName, player.CharacterName), UnturnedChat.GetColorFromName(Main.Instance.Configuration.Instance.MessageColor, Color.red));
                 return;
             }
 

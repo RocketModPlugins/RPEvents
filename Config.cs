@@ -12,7 +12,7 @@ namespace coolpuppy24.rpevents
 
         public void LoadDefaults()
         {
-            MinutesUntilRaid = 600;
+            MinutesUntilRaid = 10;
             MessageColor = "red";
         }
     }
