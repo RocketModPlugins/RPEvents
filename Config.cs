@@ -8,12 +8,22 @@ namespace coolpuppy24.rpevents
     public class RPEventsConfiguration : IRocketPluginConfiguration
     {
         public int MinutesUntilRaid;
-        public string MessageColor;
+        public string ArrestMessageColor;
+        public string ArrestFinishMessageColor;
+        public string RobMessageColor;
+        public string RobFinishMessageColor;
+        public string RaidMessageColor;
+        public string RaidFinishMessageColor;
 
         public void LoadDefaults()
         {
             MinutesUntilRaid = 10;
-            MessageColor = "red";
+            ArrestMessageColor = "red";
+            ArrestFinishMessageColor = "blue";
+            RobMessageColor = "red";
+            RobFinishMessageColor = "blue";
+            RaidMessageColor = "red";
+            RaidFinishMessageColor = "blue";
         }
     }
 }
