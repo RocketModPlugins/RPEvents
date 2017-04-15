@@ -81,7 +81,7 @@ namespace coolpuppy24.rpevents
             }
             else
             {
-                UnturnedChat.Say(Main.Instance.Translate("command_raid", caller.DisplayName, message));
+                UnturnedChat.Say(Main.Instance.Translate("command_raid", caller.DisplayName, message, Main.Instance.Configuration.Instance.MinutesUntilRaid));
                 return;
             }
         }

@@ -14,9 +14,9 @@ using System.Collections.Generic;
 
 namespace coolpuppy24.rpevents
 {
-    public class Main : RocketPlugin
+    public class Main : RocketPlugin<RPEventsConfiguration>
     {
-        public static string version = "1.0.0.2";
+        public static string version = "1.0.2.0";
 
         public static Main Instance = null;
 
@@ -45,7 +45,7 @@ namespace coolpuppy24.rpevents
                     {"command_arrest_help","Please Specify a player to Arrest!"},
                     {"command_rob","[RPEvents]: {1} Has Called a Rob on {0}!"},
                     {"command_robfinish","[RPEvents]: The Rob on {0} is Over."},
-                    {"command_raid","[RPEvents]: {0} Has Called a Raid on {1}!"},
+                    {"command_raid","[RPEvents]: {0} Has Called a Raid on {1}, Starting in {2} Minutes!"},
                     {"command_raidfinish","[RPEvents]: The Raid on {0} is Over."},
                     {"command_arrest","[RPEvents]: {1} Has Called an Arrest on {0}!" },
                     {"command_arrestfinish","[RPEvents]: The Arrest on {0} is Over."},
