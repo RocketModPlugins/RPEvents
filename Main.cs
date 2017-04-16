@@ -43,11 +43,11 @@ namespace coolpuppy24.rpevents
                     {"command_rob_help","Please Specify a player to Rob!"},
                     {"command_raid_help","Please Specify an area to Raid!"},
                     {"command_arrest_help","Please Specify a player to Arrest!"},
-                    {"command_rob","[RPEvents]: {1} Has Called a Rob on {0}!"},
+                    {"command_rob","[RPEvents]: {0} Has Called a Rob on {1}!"},
                     {"command_robfinish","[RPEvents]: The Rob on {0} is Over."},
                     {"command_raid","[RPEvents]: {0} Has Called a Raid on {1}, Starting in {2} Minutes!"},
                     {"command_raidfinish","[RPEvents]: The Raid on {0} is Over."},
-                    {"command_arrest","[RPEvents]: {1} Has Called an Arrest on {0}!" },
+                    {"command_arrest","[RPEvents]: {0} Has Called an Arrest on {1}!" },
                     {"command_arrestfinish","[RPEvents]: The Arrest on {0} is Over."},
                 };
             }
