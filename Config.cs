@@ -7,6 +7,7 @@ namespace coolpuppy24.rpevents
 {
     public class RPEventsConfiguration : IRocketPluginConfiguration
     {
+        public bool RaidDelay;
         public int MinutesUntilRaid;
         public string ArrestMessageColor;
         public string ArrestFinishMessageColor;
@@ -17,6 +18,7 @@ namespace coolpuppy24.rpevents
 
         public void LoadDefaults()
         {
+            RaidDelay = true;
             MinutesUntilRaid = 10;
             ArrestMessageColor = "red";
             ArrestFinishMessageColor = "blue";
