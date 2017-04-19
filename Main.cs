@@ -23,10 +23,23 @@ namespace coolpuppy24.rpevents
         protected override void Load()
         {
             Instance = this;
-            Rocket.Core.Logging.Logger.LogWarning("RPEvents, By: Coolpuppy24");
-            Rocket.Core.Logging.Logger.LogWarning("Plugin Version: " + Main.version);
-            Rocket.Core.Logging.Logger.Log("Successfully Loaded!");
+            Rocket.Core.Logging.Logger.LogWarning("[RPEvents] Made by: Coolpuppy24");
             Rocket.Core.Logging.Logger.LogWarning("-----------------------------");
+            if (Configuration.Instance.RaidDelay) {
+                Rocket.Core.Logging.Logger.LogWarning("[RPEvents] Raid Delay is Enabled.");
+                Rocket.Core.Logging.Logger.LogWarning("[RPEvents] Minutes Until Raid: " + Configuration.Instance.MinutesUntilRaid);
+            } else
+            {
+                Rocket.Core.Logging.Logger.LogWarning("[RPEvents] Raid Delay is Disabled.");
+            }
+            Rocket.Core.Logging.Logger.LogWarning("-----------------------------");
+            Rocket.Core.Logging.Logger.LogWarning("[RPEvents] Arrest Message Color " + Configuration.Instance.ArrestMessageColor);
+            Rocket.Core.Logging.Logger.LogWarning("[RPEvents] Arrest Finish Message Color " + Configuration.Instance.ArrestFinishMessageColor);
+            Rocket.Core.Logging.Logger.LogWarning("[RPEvents] Rob Message Color " + Configuration.Instance.RobMessageColor);
+            Rocket.Core.Logging.Logger.LogWarning("[RPEvents] Rob Finish Message Color " + Configuration.Instance.RobFinishMessageColor);
+            Rocket.Core.Logging.Logger.LogWarning("[RPEvents] Raid Message Color " + Configuration.Instance.RaidMessageColor);
+            Rocket.Core.Logging.Logger.LogWarning("[RPEvents] Raid Finish Message Color " + Configuration.Instance.RaidFinishMessageColor);
+            Rocket.Core.Logging.Logger.Log("Successfully Loaded!");
         }
 
         protected override void Unload()
