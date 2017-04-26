@@ -75,7 +75,7 @@ namespace coolpuppy24.rpevents
             }
             else
             {
-                UnturnedChat.Say(Main.Instance.Translate("command_rob", caller.DisplayName, player.CharacterName), UnturnedChat.GetColorFromName(Main.Instance.Configuration.Instance.RobMessageColor, Color.red));
+                UnturnedChat.Say("[RPEvents]: " + Main.Instance.Translate("command_rob", caller.DisplayName, player.CharacterName), UnturnedChat.GetColorFromName(Main.Instance.Configuration.Instance.StartColor, Color.red));
                 return;
             }
 

@@ -9,23 +9,15 @@ namespace coolpuppy24.rpevents
     {
         public bool RaidDelay;
         public int MinutesUntilRaid;
-        public string ArrestMessageColor;
-        public string ArrestFinishMessageColor;
-        public string RobMessageColor;
-        public string RobFinishMessageColor;
-        public string RaidMessageColor;
-        public string RaidFinishMessageColor;
+        public string StartColor;
+        public string FinishColor;
 
         public void LoadDefaults()
         {
             RaidDelay = true;
             MinutesUntilRaid = 10;
-            ArrestMessageColor = "red";
-            ArrestFinishMessageColor = "blue";
-            RobMessageColor = "red";
-            RobFinishMessageColor = "blue";
-            RaidMessageColor = "red";
-            RaidFinishMessageColor = "blue";
+            StartColor = "red";
+            FinishColor = "blue";
         }
     }
 }

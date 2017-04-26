@@ -12,7 +12,7 @@ using UnityEngine;
 
 namespace coolpuppy24.rpevents
 {
-    public class RaidCommand : IRocketCommand
+    public class AssistanceCommand : IRocketCommand
     {
         public static Main Instance;
 
@@ -20,7 +20,7 @@ namespace coolpuppy24.rpevents
         {
             get
             {
-                return new List<string>() {};
+                return new List<string>() {"a"};
             }
         }
 
@@ -36,7 +36,7 @@ namespace coolpuppy24.rpevents
         {
             get
             {
-                return "Show who's getting raided!";
+                return "Call for backup!";
             }
         }
 
@@ -44,7 +44,7 @@ namespace coolpuppy24.rpevents
         {
             get
             {
-                return "raid";
+                return "assistance";
             }
         }
 
@@ -52,7 +52,7 @@ namespace coolpuppy24.rpevents
         {
             get
             {
-                return new List<string>() { "rpevents.raid" };
+                return new List<string>() { "rpevents.assistance" };
             }
         }
 
@@ -72,19 +72,16 @@ namespace coolpuppy24.rpevents
 
             if (command.Length == 0)
             {
-                UnturnedChat.Say(caller, Main.Instance.Translate("command_raid_help"));
-                return;
+                UnturnedChat.Say("[RPEvents]: " + Main.Instance.Translate("command_assistance", caller.DisplayName), UnturnedChat.GetColorFromName(Main.Instance.Configuration.Instance.StartColor, Color.red));
             }
             if (command.Length == null)
             {
                 Rocket.Core.Logging.Logger.Log("This command cannot be called from the console!");
                 return;
             }
-            else if (Main.Instance.Configuration.Instance.RaidDelay)
+            else if (Main.Instance.Configuration.Instance.RaidDelay && command.Length > 0)
             {
-                UnturnedChat.Say("[RPEvents]: " + Main.Instance.Translate("command_raid_delay", caller.DisplayName, message, Main.Instance.Configuration.Instance.MinutesUntilRaid), UnturnedChat.GetColorFromName(Main.Instance.Configuration.Instance.FinishColor, Color.red));
-            } else {
-                UnturnedChat.Say("[RPEvents]: " + Main.Instance.Translate("command_raid", caller.DisplayName, message), UnturnedChat.GetColorFromName(Main.Instance.Configuration.Instance.StartColor, Color.red));
+                UnturnedChat.Say("[RPEvents]: " + Main.Instance.Translate("command_assistance_specified", caller.DisplayName, message), UnturnedChat.GetColorFromName(Main.Instance.Configuration.Instance.StartColor, Color.red));
             }
         }
     }
