@@ -74,15 +74,8 @@ namespace coolpuppy24.rpevents
             {
                 UnturnedChat.Say("[RPEvents]: " + Main.Instance.Translate("command_assistance", caller.DisplayName), UnturnedChat.GetColorFromName(Main.Instance.Configuration.Instance.StartColor, Color.red));
             }
-            if (command.Length == null)
-            {
-                Rocket.Core.Logging.Logger.Log("This command cannot be called from the console!");
-                return;
-            }
-            else if (Main.Instance.Configuration.Instance.RaidDelay && command.Length > 0)
-            {
-                UnturnedChat.Say("[RPEvents]: " + Main.Instance.Translate("command_assistance_specified", caller.DisplayName, message), UnturnedChat.GetColorFromName(Main.Instance.Configuration.Instance.StartColor, Color.red));
-            }
+
+            UnturnedChat.Say("[RPEvents]: " + Main.Instance.Translate("command_assistance_specified", caller.DisplayName, message), UnturnedChat.GetColorFromName(Main.Instance.Configuration.Instance.StartColor, Color.red));
         }
     }
 }

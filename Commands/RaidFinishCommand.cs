@@ -70,17 +70,7 @@ namespace coolpuppy24.rpevents
 
             string message = command.GetParameterString(0);
 
-            if (command.Length == null)
-            {
-                Rocket.Core.Logging.Logger.Log("This command cannot be called from the console!");
-                return;
-            }
-            else
-            {
-                UnturnedChat.Say(Main.Instance.Translate("command_raidfinish", message), UnturnedChat.GetColorFromName(Main.Instance.Configuration.Instance.FinishColor, Color.red));
-                return;
-            }
-
+            UnturnedChat.Say(Main.Instance.Translate("command_raidfinish", message), UnturnedChat.GetColorFromName(Main.Instance.Configuration.Instance.FinishColor, Color.red));
         }
     }
 }

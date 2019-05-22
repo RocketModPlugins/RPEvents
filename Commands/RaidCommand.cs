@@ -75,12 +75,8 @@ namespace coolpuppy24.rpevents
                 UnturnedChat.Say(caller, Main.Instance.Translate("command_raid_help"));
                 return;
             }
-            if (command.Length == null)
-            {
-                Rocket.Core.Logging.Logger.Log("This command cannot be called from the console!");
-                return;
-            }
-            else if (Main.Instance.Configuration.Instance.RaidDelay)
+
+            if (Main.Instance.Configuration.Instance.RaidDelay)
             {
                 UnturnedChat.Say("[RPEvents]: " + Main.Instance.Translate("command_raid_delay", caller.DisplayName, message, Main.Instance.Configuration.Instance.MinutesUntilRaid), UnturnedChat.GetColorFromName(Main.Instance.Configuration.Instance.FinishColor, Color.red));
             } else {

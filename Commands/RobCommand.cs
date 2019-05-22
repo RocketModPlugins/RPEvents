@@ -68,17 +68,7 @@ namespace coolpuppy24.rpevents
             UnturnedPlayer player = command.GetUnturnedPlayerParameter(0);
             if (player == null) UnturnedChat.Say(caller, Main.Instance.Translate("player_not_found"));
 
-            if (command.Length == null)
-            {
-                Rocket.Core.Logging.Logger.LogError("This command cannot be called from the console!");
-                return;
-            }
-            else
-            {
-                UnturnedChat.Say("[RPEvents]: " + Main.Instance.Translate("command_rob", caller.DisplayName, player.CharacterName), UnturnedChat.GetColorFromName(Main.Instance.Configuration.Instance.StartColor, Color.red));
-                return;
-            }
-
+            UnturnedChat.Say("[RPEvents]: " + Main.Instance.Translate("command_rob", caller.DisplayName, player.CharacterName), UnturnedChat.GetColorFromName(Main.Instance.Configuration.Instance.StartColor, Color.red));
         }
     }
 }
