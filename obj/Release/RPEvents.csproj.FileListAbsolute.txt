@@ -1,0 +1,4 @@
+C:\Users\irfan\Documents\GitHub\RPEvents\bin\Release\RPEvents.dll
+C:\Users\irfan\Documents\GitHub\RPEvents\obj\Release\RPEvents.csprojAssemblyReference.cache
+C:\Users\irfan\Documents\GitHub\RPEvents\obj\Release\RPEvents.csproj.CoreCompileInputs.cache
+C:\Users\irfan\Documents\GitHub\RPEvents\obj\Release\RPEvents.dll
